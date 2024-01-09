@@ -9,6 +9,7 @@
 // how to declare a symbol and use it in object 
 const mySym= Symbol("Key");
 const myInfo  = {
+    email:"obabu2.0@gmail.com",
     greeting: "Namaste",
     name: "hoBabu",
     [mySym]:"Key",
@@ -39,3 +40,30 @@ myInfo.greetings2 = function()
 console.log(myInfo.greetings());
 console.log(myInfo.greetings2());
 // thiss keyword is use  to refer to current object 
+// objects in object 
+const user = {
+    email:"hobabu2.0@gmail.com",
+    fullname:{
+        firstname:"Aman",
+        lastname:"kumar"
+    }
+}
+//console.log(user.fullname); 
+// combine two objects 
+// method 1 
+//const obj3 = Object.assign({} , user , myInfo) // here {} is given to act as a target object
+ // mentos method 
+ const obj4 = {...user , ...myInfo};
+ console.log(obj4);
+ console.log(Object.keys(user)) // return an array of keys of given object 
+ console.log(user.hasOwnProperty("email")); // return true or false
+
+ //object destructor
+ // fo accessing eement of object we use . operator 
+ // but if u want to use it again and again it will be lenghty
+
+ // mentos way 
+ const {email:mail} = user;
+ const {email:mail2} = myInfo;
+ console.log(mail);
+ // it is mainly used in react js 
