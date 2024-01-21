@@ -1,0 +1,60 @@
+Everything in java script happens in a execution context .
+Imagine a box type structure in which there is two coloumn 
+--> memory  also know as variable enviroment 
+--> code  also know as thread of execution 
+
+JS is synchronous and single threaded language .
+synchronous--> in specific order 
+single threaded --> one command at a time is executed 
+
+memory / variable enviroment / creation phase --> allocation of memory before code starts 
+executing
+for var , const , let is undefined 
+for function its whole code is stored 
+
+call stack stores the order of execution 
+
+
+HOSTING 
+Even the code starts running memory is allocated each and every variable is known as hosting 
+Let and const are also hosted but behaves diffenrently .
+
+Shortest js program --> empty file 
+a gloabl executioncontext is created and memory is allocated 
+js engine creates a global object --> window its different for every browser.
+window is a global object which is created along global execution context 
+this keyword refers to global object window in global space .
+
+
+whenever u create any function or var ..etc in global object ot attached to window 
+
+
+undefined vs not definded 
+
+undefined --> memory is allocated but it is yet to be initialize 
+not defined --> it is not present not even hosted 
+
+undefined is just like a placeholder till  a  value gets assigned 
+
+what is lexical enviroment ??
+lexical enviroment is local memory space along with its parent lexical enviroment . 
+
+let vs const 
+both are hosted but they behave diffenrently as compared to var 
+ before a code starts executing  memory is allocated in case of 
+ var --> its space is allocated in global object --. window 
+ const and let --> sepearte space is allocated it will give error if u to access it 
+ before initializing , refernece error --> cant access before initializing
+
+ reference error 
+ type error 
+ syntax error 
+
+
+ reference error --> when js engine try to find a variable in memory but cant access it 
+ type error --> const a = 57 ;
+                 a = 56;
+                 it will give type error 
+syntax error --> code is not executed 
+                 const a ;
+                it will show u syntax error 
